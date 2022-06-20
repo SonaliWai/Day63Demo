@@ -1,0 +1,59 @@
+﻿@model Day63Demo.Models.ViewModel.UserViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="bg-dark text-warning">Create New User</h1>
+
+<form method="post">
+    <table class="table table-bordered">
+        <tr>
+            <th>FirstName</th>
+            <td><input asp-for="FirstName" /></td>
+        </tr>
+        <tr>
+            <th>LastName</th>
+            <td><input asp-for="LastName" /></td>
+        </tr>
+        <tr>
+            <th>DateOfBirth</th>
+            <td><input asp-for="DateOfBirth" /></td>
+        </tr>
+        <tr>
+            <th>Pan</th>
+            <td><input asp-for="Pan" /></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td><input asp-for="Address" /></td>
+        </tr>
+       @* <tr><th>Gender :</th>
+            <td>Male<input type="radio" name="gender" value="Male">
+            Female<input type="radio" name="gender" value="Female"></td>
+         </tr>*@
+        <tr>
+            <th>Gender</th>
+            <td><input asp-for="Gender" /></td>
+        </tr>
+        <tr>
+            <th>MobileNumber</th>
+            <td><input asp-for="MobileNumber" /></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input asp-for="Email" /></td>
+        </tr>
+        <tr>
+            <th>Comments</th>
+            <td><input asp-for="Comments" /></td>
+        </tr>
+        <tr>
+            <th>DepartmentRefId</th>
+            <td><input asp-for="DepartmentRefId" /></td>
+        </tr>
+
+
+    </table>
+    <input type="submit" value="Save New User" class="btn btn-success" />
+    <a asp-action="Index" class="btn btn-primary">Back to Listing</a>
+</form>

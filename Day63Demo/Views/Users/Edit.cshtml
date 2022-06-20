@@ -1,0 +1,57 @@
+﻿@model Day63Demo.Models.ViewModel.UserViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="bg-dark text-warning">User Edit</h1>
+
+<form method="post" class="alert alert-primary">
+    <table class="table table-bordered" >
+        <tr>
+            <th>Id</th>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <th>FirstName</th>
+            <td><input asp-for="FirstName" /></td>
+        </tr>
+        <tr>
+            <th>LastName</th>
+            <td><input asp-for="LastName" /></td>
+        </tr>
+         <tr>
+            <th>DateOfBirth</th>
+            <td><input asp-for="DateOfBirth" /></td>
+        </tr>
+         <tr>
+            <th>Pan</th>
+            <td><input asp-for="Pan" /></td>
+        </tr>
+         <tr>
+            <th>Address</th>
+            <td><input asp-for="Address" /></td>
+        </tr>
+         <tr>
+            <th>Gender</th>
+            <td><input asp-for="Gender" /></td>
+        </tr>
+         <tr>
+            <th>MobileNumber</th>
+            <td><input asp-for="MobileNumber" /></td>
+        </tr>
+         <tr>
+            <th>Email</th>
+            <td><input asp-for="Email" /></td>
+        </tr>
+         <tr>
+            <th>Comments</th>
+            <td><input asp-for="Comments" /></td>
+        </tr>
+         <tr>
+            <th>DepartmentRefId</th>
+            <td><input asp-for="DepartmentRefId" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Save Changes" class="btn btn-warning" />
+    <a asp-action="Index" class="btn btn-primary">Back to Listing</a>
+</form>

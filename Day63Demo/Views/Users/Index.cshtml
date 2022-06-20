@@ -1,0 +1,53 @@
+﻿@model List<Day63Demo.Models.ViewModel.UserViewModel>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 class="bg-dark text-warning">Users</h1>
+
+<a asp-action="Create" class="btn btn-success mb-2">Create New User</a>
+
+<table class="table table-bordered table-striped">
+    <tr class="bg-warning">
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>DateOfBirth</th>
+        <th>Pan</th>
+        <th>Address</th>
+        
+        <th>Gender</th>
+        <th>MobileNumber</th>
+        <th>Email</th>
+        <th>Comments</th>
+        <th>DepartmentRefId</th>
+
+
+    </tr>
+
+    @foreach (var userViewModel in Model)
+    {
+        <tr class="alert alert-success">
+            <td>@userViewModel.Id</td>
+            <td>@userViewModel.FirstName</td>
+            <td>@userViewModel.LastName</td>
+            <td>@userViewModel.DateOfBirth</td>
+            <td>@userViewModel.Pan</td>
+            <td>@userViewModel.Address</td>
+            <td>@userViewModel.Gender</td>
+            <td>@userViewModel.MobileNumber</td>
+            <td>@userViewModel.Email</td>
+            <td>@userViewModel.Comments</td>
+            <td>@userViewModel.DepartmentRefId</td>
+
+
+            
+                <td><a asp-controller="Users" asp-action="Details" asp-route-id="@userViewModel.Id" class="btn btn-outline-primary">Details</a></td>
+                <td><a asp-controller="Users" asp-action="Edit" asp-route-id="@userViewModel.Id" class="btn btn-outline-warning">Edit</a></td>
+                <td><a asp-controller="Users" asp-action="Delete" asp-route-id="@userViewModel.Id" class="btn btn-outline-danger">Delete</a></td>
+            
+        </tr>
+    }
+</table>
